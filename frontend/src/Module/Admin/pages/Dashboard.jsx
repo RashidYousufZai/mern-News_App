@@ -324,8 +324,12 @@ const Dashboard = ({ isAdmin }) => {
       dataIndex: "keyWord",
       render: (_, { keyWord }) => (
         <>
-          {keyWord.map((e) => {
-            return <Tag color="blue">{e}</Tag>;
+          {keyWord.map((e, index) => {
+            return (
+              <Tag color="blue" key={index}>
+                {e}
+              </Tag>
+            );
           })}
         </>
       ),
